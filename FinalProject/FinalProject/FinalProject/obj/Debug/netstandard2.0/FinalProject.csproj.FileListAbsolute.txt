@@ -1,0 +1,14 @@
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard2.0\FinalProject.deps.json
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard2.0\FinalProject.dll
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard2.0\ref\FinalProject.dll
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard2.0\FinalProject.pdb
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.csproj.AssemblyReference.cache
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.AssemblyInfoInputs.cache
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.AssemblyInfo.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.csproj.CoreCompileInputs.cache
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.dll
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\ref\FinalProject.dll
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.pdb
