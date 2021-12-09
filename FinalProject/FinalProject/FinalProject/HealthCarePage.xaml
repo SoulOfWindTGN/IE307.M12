@@ -9,6 +9,8 @@
             android:TabbedPage.BarSelectedItemColor="Orange"
             BarBackgroundColor="#4a096e">
     <!--Pages can be added as references or inline-->
+    <ContentPage Title="Thông tin người dùng" IconImageSource="user.png"/>
+    <ContentPage Title="Bảng điều khiển" IconImageSource="panel.png"/>
     <ContentPage Title="Tính toán" IconImageSource="calculator.png">
         <ScrollView>
             <StackLayout>
@@ -45,6 +47,6 @@
             </StackLayout>
         </ScrollView>
     </ContentPage>
-    <ContentPage Title="Tab 2" />
-    <ContentPage Title="Tab 3" />
+    <ContentPage Title="Nhắc nhở" IconImageSource="remind.png"/>
+    <ContentPage Title="Lịch sử hoạt động" IconImageSource="history.png"/>
 </TabbedPage>
