@@ -7,46 +7,111 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="White"
             android:TabbedPage.BarSelectedItemColor="Orange"
-            BarBackgroundColor="#4a096e">
+            BarBackgroundColor="#4a096e"
+            BackgroundColor="#cad0db">
     <!--Pages can be added as references or inline-->
     <ContentPage Title="Thông tin người dùng" IconImageSource="user.png"/>
     <ContentPage Title="Bảng điều khiển" IconImageSource="panel.png"/>
     <ContentPage Title="Tính toán" IconImageSource="calculator.png">
-        <ScrollView>
-            <StackLayout>
+        <StackLayout>
             <Image Source="calculator_banner.png"/>
-            <Grid HorizontalOptions="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="180" ></RowDefinition>
-                    <RowDefinition Height="180"></RowDefinition>
-                    <RowDefinition Height="180"></RowDefinition>
-                    <RowDefinition Height="180"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+            <ScrollView>
+                <Grid HorizontalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180" ></RowDefinition>
+                        <RowDefinition Height="180"></RowDefinition>
+                        <RowDefinition Height="180"></RowDefinition>
+                        <RowDefinition Height="180"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
-                <ImageButton Source="bmi.png" Grid.Column="0" Grid.Row="0"
+                    <ImageButton Source="bmi.png" Grid.Column="0" Grid.Row="0"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="BMI" Clicked="BMI_Clicked"/>
-                <ImageButton Source="body.png" Grid.Column="1" Grid.Row="0"
+                    <ImageButton Source="body.png" Grid.Column="1" Grid.Row="0"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="LBM" Clicked="LBM_Clicked"/>
-                <ImageButton Source="calories.png" Grid.Column="0" Grid.Row="1"
+                    <ImageButton Source="calories.png" Grid.Column="0" Grid.Row="1"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                <ImageButton Source="hydration.png" Grid.Column="1" Grid.Row="1"
+                    <ImageButton Source="hydration.png" Grid.Column="1" Grid.Row="1"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                <ImageButton Source="fitness.png" Grid.Column="0" Grid.Row="2"
+                    <ImageButton Source="fitness.png" Grid.Column="0" Grid.Row="2"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                <ImageButton Source="weighing_scale.png" Grid.Column="1" Grid.Row="2"
+                    <ImageButton Source="weighing_scale.png" Grid.Column="1" Grid.Row="2"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                <ImageButton Source="FFMI.png" Grid.Column="0" Grid.Row="3"
+                    <ImageButton Source="FFMI.png" Grid.Column="0" Grid.Row="3"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                <ImageButton Source="kcal.png" Grid.Column="1" Grid.Row="3"
+                    <ImageButton Source="kcal.png" Grid.Column="1" Grid.Row="3"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-            </Grid>
-            </StackLayout>
-        </ScrollView>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
     </ContentPage>
-    <ContentPage Title="Nhắc nhở" IconImageSource="remind.png"/>
+    <ContentPage Title="Nhắc nhở" IconImageSource="remind.png">
+        <StackLayout>
+            <Image Source="remind_banner.png"/>
+            <ScrollView>
+                <StackLayout>
+                <Frame CornerRadius="10" HasShadow="True">
+                    <StackLayout>
+                        <Image Source="remindWater.jpg" HeightRequest="160"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="glass.png"/>
+                                <Label Text="Nhắc nhở uống nước" FontSize="Medium" FontAttributes="Bold"/>
+                            <Switch x:Name="remindWater" IsToggled="False" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <Label Text="Khoảng thời gian nhắc nhở:" FontSize="Medium"/>
+                        <StackLayout Orientation="Horizontal">
+                            <RadioButton Content="1 giờ" IsChecked="true"/>
+                            <RadioButton Content="2 giờ"/>
+                            <RadioButton Content="3 giờ"/>
+                            <RadioButton Content="4 giờ"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="10" HasShadow="True">
+                    <StackLayout>
+                            <Image Source="remindFood.jpg" HeightRequest="160"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="breakfast.png"/>
+                                <Label Text="Nhắc nhở ăn sáng" FontSize="Medium" FontAttributes="Bold"/>
+                                <Switch x:Name="remindBreakfast" IsToggled="False" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="lunch.png"/>
+                                <Label Text="Nhắc nhở ăn trưa" FontSize="Medium" FontAttributes="Bold"/>
+                                <Switch x:Name="remindLunch" IsToggled="False" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="tea.png" WidthRequest="32" HeightRequest="32"/>
+                                <Label Text="Nhắc nhở ăn chiều" FontSize="Medium" FontAttributes="Bold"/>
+                                <Switch x:Name="remindTeabreak" IsToggled="False" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="dinner.png"/>
+                                <Label Text="Nhắc nhở ăn tối" FontSize="Medium" FontAttributes="Bold"/>
+                                <Switch x:Name="remindDinner" IsToggled="False" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </StackLayout>
+                </Frame>
+                    <Frame CornerRadius="10" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="remindPill.jpg" HeightRequest="160"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="medicine.png"  WidthRequest="30" HeightRequest="30"/>
+                                <Label Text="Nhắc nhở uống thuốc" FontSize="Medium" FontAttributes="Bold"/>
+                                <Switch x:Name="remindPill" IsToggled="False" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Thêm thuốc" FontSize="Medium"/>
+                                <ImageButton Source="plus.jpg" HorizontalOptions="EndAndExpand" WidthRequest="30" HeightRequest="30"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage>
     <ContentPage Title="Lịch sử hoạt động" IconImageSource="history.png"/>
 </TabbedPage>

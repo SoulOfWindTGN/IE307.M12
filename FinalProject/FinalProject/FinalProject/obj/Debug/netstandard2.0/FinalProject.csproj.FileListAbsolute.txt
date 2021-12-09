@@ -35,6 +35,3 @@ D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstand
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.dll
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\ref\FinalProject.dll
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.pdb
-D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\UserInfoPage.xaml.g.cs
-D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\RemindPage.xaml.g.cs
-D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\HistoryPage.xaml.g.cs

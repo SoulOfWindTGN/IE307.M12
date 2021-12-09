@@ -1204,3 +1204,14 @@ D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\panel.png
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\history.png
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remind.png
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remind_banner.jpg
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remindwater.png
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\glass.png
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\tea.png
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\lunch.png
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\dinner.png
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\breakfast.png
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remindpill.jpg
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remindfood.jpg
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\plus.jpg
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\medicine.png
