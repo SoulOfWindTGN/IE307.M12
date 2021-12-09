@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            x:Class="FinalProject.HealthCarePage"
+            NavigationPage.HasNavigationBar="False"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="White"
+            android:TabbedPage.BarSelectedItemColor="Orange"
+            BarBackgroundColor="#4a096e">
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Tính toán" IconImageSource="calculator.png">
+        <ScrollView>
+            <StackLayout>
+            <Image Source="calculator_banner.png"/>
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180" ></RowDefinition>
+                    <RowDefinition Height="180"></RowDefinition>
+                    <RowDefinition Height="180"></RowDefinition>
+                    <RowDefinition Height="180"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="bmi.png" Grid.Column="0" Grid.Row="0"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="BMI" Clicked="BMI_Clicked"/>
+                <ImageButton Source="body.png" Grid.Column="1" Grid.Row="0"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="LBM" Clicked="LBM_Clicked"/>
+                <ImageButton Source="calories.png" Grid.Column="0" Grid.Row="1"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <ImageButton Source="hydration.png" Grid.Column="1" Grid.Row="1"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <ImageButton Source="fitness.png" Grid.Column="0" Grid.Row="2"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <ImageButton Source="weighing_scale.png" Grid.Column="1" Grid.Row="2"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <ImageButton Source="FFMI.png" Grid.Column="0" Grid.Row="3"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <ImageButton Source="kcal.png" Grid.Column="1" Grid.Row="3"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Tab 2" />
+    <ContentPage Title="Tab 3" />
+</TabbedPage>

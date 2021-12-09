@@ -9,8 +9,9 @@ namespace FinalProject
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            Database db = new Database();
+            db.createDatabase();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.BMI"
+             Title="BMI">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="i.png" Order="Primary" Priority="0" x:Name="info" Clicked="info_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="cake.png" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="age" Placeholder="Độ tuổi" PlaceholderColor="Black" Keyboard="Numeric" TextColor="Purple"
+                           Grid.Row="0" Grid.Column="1"/>
+                    <Image Source="weight_scale.png" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="weight" Placeholder="Cân nặng (kg)" PlaceholderColor="Black" HeightRequest="40" TextColor="Purple"
+                           Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+                    <Image Source="height.png" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="height" Placeholder="Chiều cao (cm)" PlaceholderColor="Black" HeightRequest="40" TextColor="Purple"
+                           Grid.Row="2" Grid.Column="1"/>
+                    <Image Source="gender.png" Grid.Row="3" Grid.Column="0"/>
+                    <Picker x:Name="gender" Grid.Row="3" Grid.Column="1"/>
+                </Grid>
+            </Frame>
+            <Button Text="Tính toán" BackgroundColor="Purple" HeightRequest="60" TextColor="White" FontSize="Large" 
+                    x:Name="Calculate" Clicked="Calculate_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
