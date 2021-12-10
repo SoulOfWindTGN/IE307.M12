@@ -1204,6 +1204,18 @@ D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\panel.png
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\history.png
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remind.png
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\user.png
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\panel.png
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\history.png
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remind.png
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\female.png
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\male.png
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\exercise.png
+=======
+>>>>>>> Stashed changes
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remind_banner.jpg
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remindwater.png
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\glass.png
@@ -1215,3 +1227,7 @@ D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\remindfood.jpg
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\plus.jpg
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject.Android\obj\Debug\110\res\drawable\medicine.png
+<<<<<<< Updated upstream
+=======
+>>>>>>> c2d46f1dbad58ecb90b3a9fa8b37ff7d7e0f367a
+>>>>>>> Stashed changes

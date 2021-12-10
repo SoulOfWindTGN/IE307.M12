@@ -19,7 +19,8 @@ namespace FinalProject
 
         private void regist_Clicked(object sender, EventArgs e)
         {
-            if (username.Text == null || password.Text == null || check_password.Text == null)
+            if (username.Text == null || password.Text == null || check_password.Text == null || name.Text == null || weight.Text == null ||
+                height.Text==null)
             {
                 DisplayAlert("Thông báo", "Vui lòng nhập đầy đủ thông tin đăng ký", "Xác nhận");
             }
@@ -35,6 +36,15 @@ namespace FinalProject
                     User user = new User();
                     user.UserName = username.Text;
                     user.UserPassword = password.Text;
+                    user.UserFullName = name.Text;
+                    user.UserDateOfBirth = birthday.Date.ToString("dd/MM/yyyy");
+                    if (male.IsChecked)
+                        user.UserGender = "Nam";
+                    else
+                        user.UserGender = "Nữ";
+                    user.UserHeight = Int32.Parse(height.Text);
+                    user.UserWeight = Int32.Parse(weight.Text);
+
                     if (db.addUser(user))
                     {
                         DisplayAlert("Thông báo", "Đăng ký thành công", "Xác nhận");

@@ -41,26 +41,65 @@ namespace FinalProject
             {
                 int Age = Int32.Parse(age.Text);
                 double Weight = float.Parse(weight.Text);
-                double Height = float.Parse(height.Text) / 100;
+                double Height = float.Parse(height.Text);
                 int Gender = gender.SelectedIndex;
                 int Metric = metric.SelectedIndex;
                 String Result;
-
-                if(Metric == 0)
+                if (Int32.Parse(age.Text) > 14)
                 {
-                    if(Gender==0)
-                        Result = Math.Round(0.407 * Weight + 0.267 * Height - 19.2, 2).ToString() + " kg";
+                    if (Metric == 0)
+                    {
+                        if (Gender == 0)
+                        {
+                            double LMS = Math.Round(0.407 * Weight + 0.267 * Height - 19.2, 2);
+                            Result = LMS.ToString() + " kg - ";
+                            Result = Result + (Math.Round(LMS * 100 / Weight, 2)).ToString() + "%";
+                        }
+                        else
+                        {
+                            double LMS = Math.Round(0.252 * Weight + 0.267 * Height - 19.2, 2);
+                            Result = LMS.ToString() + " kg -";
+                            Result = Result + (Math.Round(LMS * 100 / Weight, 2)).ToString() + "%";
+                        }
+                    }
+                    else if (Metric == 1)
+                    {
+                        if (Gender == 0)
+                        {
+                            double LMS = Math.Round(1.1 * Weight - 128 * (Weight / Height) * (Weight / Height), 2);
+                            Result = LMS.ToString() + " kg - ";
+                            Result = Result + (Math.Round(LMS * 100 / Weight, 2)).ToString() + "%";
+                        }
+                        else
+                        {
+                            double LMS = Math.Round(1.07 * Weight - 128 * (Weight / Height) * (Weight / Height), 2);
+                            Result = LMS.ToString() + " kg - ";
+                            Result = Result + (Math.Round(LMS * 100 / Weight, 2)).ToString() + "%";
+                        }
+                    }
                     else
-                        Result = Math.Round(0.252 * Weight + 0.267 * Height - 19.2, 2).ToString() + " kg";
-                }
-                else if (Metric == 1)
-                {
-                    Result = Math.Round(1.1 * Weight - 128 * (Weight/Height) * (Weight / Height), 2).ToString() + " kg";
+                    {
+                        if (Gender == 0)
+                        {
+                            double LMS = Math.Round(0.32810 * Weight + 0.33929 * Height - 29.5336, 2);
+                            Result = LMS.ToString() + " kg - ";
+                            Result = Result + (Math.Round(LMS * 100 / Weight, 2)).ToString() + "%";
+                        }
+                        else
+                        {
+                            double LMS = Math.Round(0.29569 * Weight + 0.41813 * Height - 43.2933, 2);
+                            Result = LMS.ToString() + " kg - ";
+                            Result = Result + (Math.Round(LMS * 100 / Weight, 2)).ToString() + "%";
+                        }
+                    }
                 }
                 else
                 {
-                    Result = Math.Round(0.32810 * Weight + 0.33929 * Height - 29.5336, 2).ToString() + " kg";
+                    double LMS = Math.Round(0.0215 * Math.Pow(Weight, 0.6469) * Math.Pow(Height, 0.7236) * 3.8, 2);
+                    Result = LMS.ToString() + " kg - ";
+                    Result = Result + (Math.Round(LMS * 100 / Weight, 2)).ToString() + "%";
                 }
+                DisplayAlert("Khối lượng cơ thể nạc", Result, "Trở lại");
             }
         }
     }

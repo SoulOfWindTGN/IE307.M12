@@ -28,7 +28,7 @@
                            Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
                     <Image Source="height.png" Grid.Row="2" Grid.Column="0"/>
                     <Entry x:Name="height" Placeholder="Chiều cao (cm)" PlaceholderColor="Black" HeightRequest="40" TextColor="Purple"
-                           Grid.Row="2" Grid.Column="1"/>
+                           Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
                     <Image Source="gender.png" Grid.Row="3" Grid.Column="0"/>
                     <Picker x:Name="gender" Grid.Row="3" Grid.Column="1"/>
                 </Grid>

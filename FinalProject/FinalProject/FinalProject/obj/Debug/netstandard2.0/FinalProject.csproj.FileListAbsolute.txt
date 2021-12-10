@@ -35,3 +35,15 @@ D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstand
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.dll
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\ref\FinalProject.dll
 D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.pdb
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\UserInfoPage.xaml.g.cs
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\RemindPage.xaml.g.cs
+D:\Nam4\DoAn\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\HistoryPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\UserInfoPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\BasalMetabolicRatePage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\HydrationPage.xaml.g.cs
+=======
+>>>>>>> c2d46f1dbad58ecb90b3a9fa8b37ff7d7e0f367a
+>>>>>>> Stashed changes

@@ -75,5 +75,19 @@ namespace FinalProject
                 return false;
             }
         }
+
+        public void deleteAll()
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.DeleteAll<User>();
+            }
+            catch
+            {
+                return;
+            }
+        }
     }
 }

@@ -153,6 +153,18 @@
     <AndroidResource Include="Resources\drawable\calculator.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    <AndroidResource Include="Resources\drawable\female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\exercise.png" />
+=======
+>>>>>>> Stashed changes
     <AndroidResource Include="Resources\drawable\remind_banner.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +196,10 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\medicine.png" />
+<<<<<<< Updated upstream
+=======
+>>>>>>> c2d46f1dbad58ecb90b3a9fa8b37ff7d7e0f367a
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

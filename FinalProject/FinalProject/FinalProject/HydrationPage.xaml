@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.HydrationPage"
+             Title="Nước trong cơ thể">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="i.png" Order="Primary" Priority="0" x:Name="info" Clicked="info_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate">
+            <Frame BorderColor="#F3F2F1"
+                   BackgroundColor="#F3F2F1"
+                   HasShadow="False"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   Padding="0">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter Property="BorderColor"
+                                            Value="#FF3300" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="#ffffff" />
+                                    <Setter Property="BorderColor"
+                                            Value="#F3F2F1" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Grid Margin="4"
+                      WidthRequest="100">
+                    <Grid WidthRequest="18"
+                          HeightRequest="18"
+                          HorizontalOptions="End"
+                          VerticalOptions="Start">
+                        <Ellipse Stroke="Red"
+                                 Fill="White"
+                                 WidthRequest="16"
+                                 HeightRequest="16"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                        <Ellipse x:Name="check"
+                                 Fill="Red"
+                                 WidthRequest="8"
+                                 HeightRequest="8"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                    </Grid>
+                    <ContentPresenter />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="cake.png" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="age" Placeholder="Độ tuổi" PlaceholderColor="Black" Keyboard="Numeric" TextColor="#2351cf"
+                           Grid.Row="0" Grid.Column="1"/>
+                    <Image Source="weight_scale.png" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="weight" Placeholder="Cân nặng (kg)" PlaceholderColor="Black" HeightRequest="40" TextColor="#2351cf"
+                           Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+                    <Image Source="height.png" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="height" Placeholder="Chiều cao (cm)" PlaceholderColor="Black" HeightRequest="40" TextColor="#2351cf"
+                           Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
+                    <Image Source="gender.png" Grid.Row="3" Grid.Column="0"/>
+                    <StackLayout Grid.Row="3" Grid.Column="1">
+                        <StackLayout RadioButtonGroup.GroupName="gender" Orientation="Horizontal">
+                            <RadioButton Value="Male" IsChecked="True" x:Name="male">
+                                <RadioButton.Content>
+                                    <StackLayout>
+                                        <Image Source="male.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" HeightRequest="50"/>
+                                        <Label Text="Nam" HorizontalOptions="Center" VerticalOptions="End"/>
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton Value="Female" x:Name="female">
+                                <RadioButton.Content>
+                                    <StackLayout>
+                                        <Image Source="female.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" HeightRequest="50"/>
+                                        <Label Text="Nữ" HorizontalOptions="Center" VerticalOptions="End" />
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Tính toán" BackgroundColor="#2351cf" HeightRequest="60" TextColor="White" FontSize="Large" 
+                    x:Name="Calculate" HorizontalOptions="Center" Clicked="Calculate_Clicked"/>
+                <Button Text="Thiết lập lại" BackgroundColor="#2351cf" HeightRequest="60" TextColor="White" FontSize="Large" 
+                    x:Name="Reset" HorizontalOptions="Center" Clicked="Reset_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

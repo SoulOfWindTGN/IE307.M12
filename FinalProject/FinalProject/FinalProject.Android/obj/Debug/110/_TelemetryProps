@@ -23,6 +23,14 @@ AndroidDexTool=d8
 AndroidLinkTool=
 AndroidEnableProfiledAot=
 AndroidInstallAfterBuild=True
+<<<<<<< Updated upstream
 AndroidSessionId=7f84f995-a176-4464-a5fc-fff6c9bfe166
+=======
+<<<<<<< HEAD
+AndroidSessionId=e15ffca6-af94-4654-a14a-cd4b222f8c9c
+=======
+AndroidSessionId=7f84f995-a176-4464-a5fc-fff6c9bfe166
+>>>>>>> c2d46f1dbad58ecb90b3a9fa8b37ff7d7e0f367a
+>>>>>>> Stashed changes
 BuildConfiguration=Debug
 TemplateName={c9e5eea5-ca05-42a1-839b-61506e0a37df}

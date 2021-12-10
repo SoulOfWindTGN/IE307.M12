@@ -114,4 +114,5 @@
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Lịch sử hoạt động" IconImageSource="history.png"/>
+
 </TabbedPage>

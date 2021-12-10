@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.RegistrationPage"
-             BackgroundImageSource="login_background.jpg">
+             BackgroundImageSource="login_background.jpg"
+             Title="Đăng ký">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Padding="40" Spacing="30">
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="40" Spacing="30">
             <BoxView HeightRequest="10"/>
             <Image HorizontalOptions="Center" WidthRequest="300" Source="health_care.png"/>
             <Frame BackgroundColor="#BF043055" HasShadow="False">
@@ -21,11 +23,33 @@
                            PlaceholderColor="White" HeightRequest="40"   
                            IsPassword="True"  
                            TextColor="White"/>
+                    <Entry x:Name="name" Placeholder="Tên người dùng"   
+                           PlaceholderColor="White" HeightRequest="40"
+                           Keyboard="Text"
+                           TextColor="White"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Ngày sinh" TextColor="White" FontSize="Medium" Padding="5"/>
+                        <DatePicker x:Name="birthday" MinimumDate="01/01/1930" MaximumDate="12/31/2020" Date="12/12/2018" Format="dd/MM/yyyy"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="gender" Padding="5 ,0 ,10,-10">
+                            <Label Text="Giới tính" TextColor="White" FontSize="Medium" Padding="0"/>
+                            <RadioButton Content="Nam" Value="Male" IsChecked="True" TextColor="Aquamarine" x:Name="male"/>
+                            <RadioButton Content="Nữ" Value="Female" TextColor="LightPink" x:Name="female"/>
+                        </StackLayout>
+                    <Entry x:Name="weight" Placeholder="Cân nặng (kg)"   
+                           PlaceholderColor="White" HeightRequest="40"
+                           Keyboard="Numeric"
+                           TextColor="White"/>
+                    <Entry x:Name="height" Placeholder="Chiều cao (cm)"   
+                           PlaceholderColor="White" HeightRequest="40"
+                           Keyboard="Numeric"
+                           TextColor="White"/>
                 </StackLayout>
             </Frame>
             <Button Text="Đăng ký" TextColor="White"  
                     FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
                     BackgroundColor="#088da5" x:Name="regist" Clicked="regist_Clicked"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

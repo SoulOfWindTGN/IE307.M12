@@ -30,5 +30,19 @@ namespace FinalProject
             navigationPage.BarBackgroundColor = Color.Green;
             Navigation.PushAsync(new LeanBodyMass());
         }
+
+        private void calo_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(8, 204, 188);
+            Navigation.PushAsync(new BasalMetabolicRatePage());
+        }
+
+        private void hydration_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(35, 81, 207);
+            Navigation.PushAsync(new HydrationPage());
+        }
     }
 }
