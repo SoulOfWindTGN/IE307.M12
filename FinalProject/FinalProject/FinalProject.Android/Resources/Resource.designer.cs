@@ -14,7 +14,7 @@ namespace FinalProject.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
 	public partial class Resource
 	{
 		
@@ -11887,10 +11887,13 @@ namespace FinalProject.Droid
 			public const int user = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int weighing_scale = 2131165361;
+			public const int user_banner = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int weight_scale = 2131165362;
+			public const int weighing_scale = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int weight_scale = 2131165363;
 			
 			static Drawable()
 			{

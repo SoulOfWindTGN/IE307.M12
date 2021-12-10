@@ -10,7 +10,31 @@
             BarBackgroundColor="#4a096e"
             BackgroundColor="#cad0db">
     <!--Pages can be added as references or inline-->
-    <ContentPage Title="Thông tin người dùng" IconImageSource="user.png"/>
+    <ContentPage Title="Thông tin người dùng" IconImageSource="user.png">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="user_banner.jpg" Aspect="AspectFill" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Text="Tên: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Ngày sinh: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Giới tính: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="Cân nặng: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="Chiều cao: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="4" Grid.Column="0"/>
+            <Button Text="Sửa thông tin người dùng" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" x:Name="editProfile" Clicked="editProfile_Clicked"
+                    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+        </Grid>
+    </ContentPage>
     <ContentPage Title="Bảng điều khiển" IconImageSource="panel.png"/>
     <ContentPage Title="Tính toán" IconImageSource="calculator.png">
         <StackLayout>

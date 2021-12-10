@@ -44,5 +44,10 @@ namespace FinalProject
             navigationPage.BarBackgroundColor = Color.FromRgb(35, 81, 207);
             Navigation.PushAsync(new HydrationPage());
         }
+
+        private void editProfile_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
