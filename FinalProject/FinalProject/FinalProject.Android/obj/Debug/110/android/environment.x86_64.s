@@ -72,15 +72,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-<<<<<<< Updated upstream
-	.asciz	"efea7327-8dd8-4880-bce6-cbde10aaaa9d"
-=======
-<<<<<<< HEAD
-	.asciz	"f1250031-4cef-4aa7-b0aa-630cf9e83a42"
-=======
-	.asciz	"efea7327-8dd8-4880-bce6-cbde10aaaa9d"
->>>>>>> c2d46f1dbad58ecb90b3a9fa8b37ff7d7e0f367a
->>>>>>> Stashed changes
+	.asciz	"d825c04d-2238-4c60-9e80-057c73cd102c"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

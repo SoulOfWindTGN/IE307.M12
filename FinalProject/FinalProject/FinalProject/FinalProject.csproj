@@ -15,40 +15,4 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="BasalMetabolicRatePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="BMI.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="HealthCarePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-    <EmbeddedResource Update="HydrationPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-=======
->>>>>>> c2d46f1dbad58ecb90b3a9fa8b37ff7d7e0f367a
->>>>>>> Stashed changes
-    <EmbeddedResource Update="LeanBodyMass.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="RegistrationPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-    <EmbeddedResource Update="UserInfoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-=======
->>>>>>> c2d46f1dbad58ecb90b3a9fa8b37ff7d7e0f367a
->>>>>>> Stashed changes
-  </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+FIlgtPHUnQyiMkQcMIENBXHsgQAIbFZWkB5f1yeAWklc2pBPlYGNb4eHw1XBPV51nSJNqTfDzO3vwXxO6SMcg==",
+  "dgSpecHash": "EVgAEf0Kbv7qGHsXeWWrSRh6lbQvkUHKJLV4hnp8UacIrqa8vzwJj6F6ztfr6lMKcvRSLUFXtw6JCa0yXaA8UA==",
   "success": true,
-  "projectFilePath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
+  "projectFilePath": "E:\\CodeData\\Xamarin\\FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

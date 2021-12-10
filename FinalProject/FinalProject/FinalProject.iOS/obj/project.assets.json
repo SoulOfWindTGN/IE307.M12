@@ -1447,7 +1447,8 @@
     "Xamarin.iOS,Version=v1.0": [
       "FinalProject >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
-      "Xamarin.Forms >= 5.0.0.2012"
+      "Xamarin.Forms >= 5.0.0.2012",
+      "sqlite-net-pcl >= 1.8.116"
     ]
   },
   "packageFolders": {
@@ -1457,11 +1458,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
+      "projectUniqueName": "E:\\CodeData\\Xamarin\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
       "projectName": "FinalProject.iOS",
-      "projectPath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
+      "projectPath": "E:\\CodeData\\Xamarin\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\obj\\",
+      "outputPath": "E:\\CodeData\\Xamarin\\FinalProject\\FinalProject\\FinalProject.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1482,8 +1483,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
-              "projectPath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj"
+            "E:\\CodeData\\Xamarin\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
+              "projectPath": "E:\\CodeData\\Xamarin\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj"
             }
           }
         }
@@ -1499,6 +1500,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2012, )"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "[1.8.116, )"
           }
         }
       }

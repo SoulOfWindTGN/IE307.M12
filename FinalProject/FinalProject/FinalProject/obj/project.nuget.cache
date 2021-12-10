@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7c/P/kNC7ky5lfGqI7K7nigo4j3ybXF3A5EV+38ZuIHsjgzvbXQk0qTjVlH3TqwXkCtRYT+GOC8xQym+btOgcw==",
+  "dgSpecHash": "W+PTWHN8BwoBspBtZ4V4ofvr6+1d+AkheeBgwyphBA3BhoJAEOA0fzWxrpD0aMPZpI2oYFBCU0OtBK40gGuxZw==",
   "success": true,
-  "projectFilePath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+  "projectFilePath": "E:\\CodeData\\Xamarin\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

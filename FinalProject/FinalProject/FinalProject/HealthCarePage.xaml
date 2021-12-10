@@ -33,9 +33,9 @@
                     <ImageButton Source="body.png" Grid.Column="1" Grid.Row="0"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="LBM" Clicked="LBM_Clicked"/>
                     <ImageButton Source="calories.png" Grid.Column="0" Grid.Row="1"
-                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="calo" Clicked="calo_Clicked"/>
                     <ImageButton Source="hydration.png" Grid.Column="1" Grid.Row="1"
-                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="hydration" Clicked="hydration_Clicked"/>
                     <ImageButton Source="fitness.png" Grid.Column="0" Grid.Row="2"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
                     <ImageButton Source="weighing_scale.png" Grid.Column="1" Grid.Row="2"
