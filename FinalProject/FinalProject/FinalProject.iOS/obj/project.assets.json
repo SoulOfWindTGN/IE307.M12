@@ -1452,21 +1452,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\name\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Nam4\\DoAn\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
+      "projectUniqueName": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
       "projectName": "FinalProject.iOS",
-      "projectPath": "D:\\Nam4\\DoAn\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
-      "packagesPath": "C:\\Users\\name\\.nuget\\packages\\",
-      "outputPath": "D:\\Nam4\\DoAn\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\obj\\",
+      "projectPath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\FinalProject.iOS.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\name\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1478,8 +1483,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Nam4\\DoAn\\IE307.M12\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
-              "projectPath": "D:\\Nam4\\DoAn\\IE307.M12\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj"
+            "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
+              "projectPath": "E:\\Github\\IE307.M12\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj"
             }
           }
         }

@@ -74,13 +74,13 @@
                     <ImageButton Source="hydration.png" Grid.Column="1" Grid.Row="1"
                     VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="hydration" Clicked="hydration_Clicked"/>
                     <ImageButton Source="fitness.png" Grid.Column="0" Grid.Row="2"
-                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="body_fat" Clicked="body_fat_Clicked"/>
                     <ImageButton Source="weighing_scale.png" Grid.Column="1" Grid.Row="2"
-                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="ideal_weight" Clicked="ideal_weight_Clicked"/>
                     <ImageButton Source="FFMI.png" Grid.Column="0" Grid.Row="3"
-                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="ffmi" Clicked="ffmi_Clicked"/>
                     <ImageButton Source="kcal.png" Grid.Column="1" Grid.Row="3"
-                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="kcal" Clicked="kcal_Clicked"/>
                 </Grid>
             </ScrollView>
         </StackLayout>

@@ -49,5 +49,33 @@ namespace FinalProject
         {
 
         }
+
+        private void body_fat_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(214, 210, 210);
+            Navigation.PushAsync(new BodyFatPage());
+        }
+
+        private void ideal_weight_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(255, 221, 28);
+            Navigation.PushAsync(new IdealWeightPage());
+        }
+
+        private void ffmi_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(217, 160, 174);
+            Navigation.PushAsync(new FFMIPage());
+        }
+
+        private void kcal_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(101, 47, 158);
+            Navigation.PushAsync(new NutritionalContentPage());
+        }
     }
 }

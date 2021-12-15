@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.FFMIPage"
+             Title="Fat Free Mass Index">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="i.png" Order="Primary" Priority="0" x:Name="info" Clicked="info_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="weight_scale.png" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="weight" Placeholder="Cân nặng (kg)" PlaceholderColor="Black" HeightRequest="40" TextColor="#d9a0ae"
+                           Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
+                    <Image Source="height.png" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="height" Placeholder="Chiều cao (cm)" PlaceholderColor="Black" HeightRequest="40" TextColor="#d9a0ae"
+                           Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+                    <Image Source="body_fat.png" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="body_fat" Placeholder="Tỷ lệ chất béo cơ thể" PlaceholderColor="Black" Keyboard="Numeric" TextColor="#d9a0ae"
+                           Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Tính toán" BackgroundColor="#d9a0ae" HeightRequest="60" TextColor="White" FontSize="Large" 
+                    x:Name="Calculate" HorizontalOptions="Center" Clicked="Calculate_Clicked"/>
+                <Button Text="Thiết lập lại" BackgroundColor="#d9a0ae" HeightRequest="60" TextColor="White" FontSize="Large" 
+                    x:Name="Reset" HorizontalOptions="Center" Clicked="Reset_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

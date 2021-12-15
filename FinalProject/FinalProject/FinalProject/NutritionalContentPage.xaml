@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.NutritionalContentPage"
+             Title="Hàm lượng dinh dưỡng">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="i.png" Order="Primary" Priority="0" x:Name="info" Clicked="info_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame>
+                <StackLayout>
+                    <Label Text="Loại thực phẩm" FontSize="Large" FontAttributes="Bold"/>
+                    <Picker x:Name="food" BackgroundColor="#652f9e" TextColor="White" FontAttributes="Bold" FontSize="Medium"
+                            SelectedIndexChanged="food_SelectedIndexChanged" HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Thịt bò nạc</x:String>
+                                <x:String>Hamburger</x:String>
+                                <x:String>Thịt heo nạc</x:String>
+                                <x:String>Ức gà</x:String>
+                                <x:String>Bơ đậu phộng</x:String>
+                                <x:String>Sữa</x:String>
+                                <x:String>Bánh mì</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Teal" CornerRadius="20" BackgroundColor="#d5ccde">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Khối lượng thực phẩm" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"/>
+                    <Label Text="Năng lượng" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"/>
+                    <Label Text="Protein" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="2"/>
+                    <Label Text="Carbohydrate" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="3"/>
+                    <Label Text="Canxi" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="4"/>
+                    <Label Text="Sắt" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="5"/>
+                    <Label Text="Chất béo" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="6"/>
+
+                    <Label Text="3000 ounces" x:Name="weight" FontSize="Medium" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" TextColor="#652f9e"/>
+                    <Label Text="189,000 k.cal" x:Name="calo" FontSize="Medium" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" TextColor="#652f9e"/>
+                    <Label Text="27,000 grams" x:Name="protein" FontSize="Medium" FontAttributes="Bold" Grid.Column="1" Grid.Row="2" TextColor="#652f9e"/>
+                    <Label Text="0,000 grams" x:Name="carbohydrate" FontSize="Medium" FontAttributes="Bold" Grid.Column="1" Grid.Row="3" TextColor="#652f9e"/>
+                    <Label Text="4000 mg" x:Name="Canxi" FontSize="Medium" FontAttributes="Bold" Grid.Column="1" Grid.Row="4" TextColor="#652f9e"/>
+                    <Label Text="2900 mg" x:Name="fe" FontSize="Medium" FontAttributes="Bold" Grid.Column="1" Grid.Row="5" TextColor="#652f9e"/>
+                    <Label Text="8000 grams" x:Name="fat" FontSize="Medium" FontAttributes="Bold" Grid.Column="1" Grid.Row="6" TextColor="#652f9e"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
