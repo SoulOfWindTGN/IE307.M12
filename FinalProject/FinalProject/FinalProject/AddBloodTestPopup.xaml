@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="300,300"
+             x:Class="FinalProject.AddBloodTestPopup">
+    <StackLayout BackgroundColor="#c0f0f0">
+        <Frame HasShadow="False" BackgroundColor="#c0f0f0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Ngày" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                <DatePicker x:Name="date_picker" MinimumDate="01/01/2018" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Chỉ số (mg/dl)" TextColor="Black" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"/>
+                <Entry Keyboard="Numeric" Grid.Row="1" Grid.Column="1" x:Name="index"/>
+                <Button Text="Thêm" BackgroundColor="#464885" TextColor="White" HorizontalOptions="Center" CornerRadius="10"
+                        Grid.Row="2" Grid.ColumnSpan="2" x:Name="add" Clicked="add_Clicked"/>
+                <Label TextColor="Red" FontSize="Medium" FontAttributes="Bold" x:Name="warning" Grid.Row="3" Grid.ColumnSpan="2"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</xct:Popup>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.WaterDashboardPage"
+             Title="Theo dõi lượng nước">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="clock.png" Order="Primary" Priority="0" x:Name="history" Clicked="history_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <AbsoluteLayout>
+                <BoxView Color="Purple" AbsoluteLayout.LayoutBounds="0, 0, 500, 50" />
+                <BoxView Color="#f59b42" AbsoluteLayout.LayoutBounds="20, 10, 370, 120"/>
+                <Label x:Name="date" AbsoluteLayout.LayoutBounds="140, 10, 370, 140" FontSize="25" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="Lượng nước lý tưởng" AbsoluteLayout.LayoutBounds="25, 50, 370, 140" FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="2.12 Lít" AbsoluteLayout.LayoutBounds="80, 80, 370, 140" FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="Lượng nước mục tiêu" AbsoluteLayout.LayoutBounds="210, 50, 370, 140" FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                <Label x:Name="water_target" AbsoluteLayout.LayoutBounds="260, 80, 370, 140" FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                <ImageButton Source="exchange.png" AbsoluteLayout.LayoutBounds="330, 75, 40, 40" BackgroundColor="#f59b42" x:Name="change" Clicked="change_Clicked"/>
+            </AbsoluteLayout>
+            <Label x:Name="remaining_water" HorizontalOptions="Center" FontSize="25" TextColor="Black" FontAttributes="Bold"/>
+            <Label x:Name="total" HorizontalOptions="Center" FontSize="25" TextColor="Black" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <AbsoluteLayout>
+                    <BoxView Color="Purple" AbsoluteLayout.LayoutBounds="0, 0, 500, 81" />
+                    <Grid AbsoluteLayout.LayoutBounds="0, 0, 500, 81">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="70"/>
+                        </Grid.ColumnDefinitions>
+                        <ImageButton Source="custom_water.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" 
+                                     BackgroundColor="Purple" x:Name="custom" Clicked="custom_Clicked"/>
+                        <Label Text="Thêm tùy chọn" Grid.Row="1" Grid.Column="0" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <ImageButton Source="chemistry_glass.png" Grid.Row="0" Grid.Column="1" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" 
+                                     BackgroundColor="Purple" x:Name="chemistry_glass" Clicked="chemistry_glass_Clicked"/>
+                        <Label Text="75ml" Grid.Row="1" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <ImageButton Source="water_glass.png" Grid.Row="0" Grid.Column="2" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" 
+                                     BackgroundColor="Purple" x:Name="water_glass" Clicked="water_glass_Clicked"/>
+                        <Label Text="200ml" Grid.Row="1" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <ImageButton Source="medium_bottle.png" Grid.Row="0" Grid.Column="3" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" 
+                                     BackgroundColor="Purple" x:Name="medium_bottle" Clicked="medium_bottle_Clicked"/>
+                        <Label Text="350ml" Grid.Row="1" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <ImageButton Source="big_bottle.png" Grid.Row="0" Grid.Column="4" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" 
+                                     BackgroundColor="Purple" x:Name="big_bottle" Clicked="big_bottle_Clicked"/>
+                        <Label Text="500ml" Grid.Row="1" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </AbsoluteLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

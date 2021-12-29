@@ -12,9 +12,18 @@ namespace FinalProject
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HealthCarePage : TabbedPage
     {
+        User user;
         public HealthCarePage()
         {
             InitializeComponent();
+        }
+        public HealthCarePage(User user)
+        {
+            InitializeComponent();
+            this.user = user;
+            String myDate = DateTime.Now.ToString("dd-MM-yyyy");
+            date_water.Text = myDate;
+            date_heartbeat.Text = myDate;
         }
 
         private void BMI_Clicked(object sender, EventArgs e)
@@ -76,6 +85,30 @@ namespace FinalProject
             var navigationPage = Application.Current.MainPage as NavigationPage;
             navigationPage.BarBackgroundColor = Color.FromRgb(101, 47, 158);
             Navigation.PushAsync(new NutritionalContentPage());
+        }
+
+        private void add_water_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.Purple;
+            Navigation.PushAsync(new WaterDashboardPage(this.user));
+        }
+
+        private void add_vitals_Clicked(object sender, EventArgs e)
+        {
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(252, 186, 3);
+            Navigation.PushAsync(new VitalsPage(this.user));
+        }
+
+        private void add_calories_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_weight_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

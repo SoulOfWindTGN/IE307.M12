@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="300,350"
+             x:Class="FinalProject.AddSleepTimePopup">
+    <StackLayout BackgroundColor="#c0f0f0">
+        <Frame HasShadow="False" BackgroundColor="#c0f0f0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Ngày" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                <DatePicker x:Name="date_picker" MinimumDate="01/01/2018" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Số giờ ngủ" Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                <Slider x:Name="slider_hours" Minimum="0" Maximum="24" Grid.Row="1" Grid.Column="1" ValueChanged="slider_hours_ValueChanged"/>
+                <Label Text="Số phút ngủ" Grid.Row="2" Grid.Column="0" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                <Slider x:Name="slider_minutes" Minimum="0" Maximum="59" Grid.Row="2" Grid.Column="1" ValueChanged="slider_minutes_ValueChanged"/>
+                <Label x:Name="time" TextColor="Black" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" Grid.ColumnSpan="2"/>
+                <Button Text="Thêm" BackgroundColor="#464885" TextColor="White" HorizontalOptions="Center" CornerRadius="10"
+                        Grid.Row="4" Grid.ColumnSpan="2" x:Name="add" Clicked="add_Clicked"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</xct:Popup>

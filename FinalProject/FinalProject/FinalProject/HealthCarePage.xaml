@@ -8,7 +8,7 @@
             android:TabbedPage.BarItemColor="White"
             android:TabbedPage.BarSelectedItemColor="Orange"
             BarBackgroundColor="#4a096e"
-            BackgroundColor="#cad0db">
+            BackgroundColor="#e0ded7">
     <!--Pages can be added as references or inline-->
     <ContentPage Title="Thông tin người dùng" IconImageSource="user.png">
         <Grid>
@@ -48,7 +48,46 @@
                     Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
         </Grid>
     </ContentPage>
-    <ContentPage Title="Bảng điều khiển" IconImageSource="panel.png"/>
+    <ContentPage Title="Bảng điều khiển" IconImageSource="panel.png">
+        <StackLayout>
+            <Image Source="dashboard.jpg"/>
+            <ScrollView>
+                <AbsoluteLayout>
+                    <Frame BackgroundColor="White" AbsoluteLayout.LayoutBounds="10,50,185,150"></Frame>
+                    <Image Source="water.png" AbsoluteLayout.LayoutBounds="20,0,100,100"/>
+                    <Label x:Name="date_water" AbsoluteLayout.LayoutBounds="125,70,100,100" TextColor="Black"/>
+                    <Label Text="Theo dõi lượng nước" AbsoluteLayout.LayoutBounds="20,110,200,120" TextColor="#4287f5" FontAttributes="Bold"/>
+                    <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="20, 140, 165, 2" />
+                    <Label Text="Thêm nước" AbsoluteLayout.LayoutBounds="20,160,100,100"/>
+                    <ImageButton Source="add.png" AbsoluteLayout.LayoutBounds="135, 145, 50, 50" BackgroundColor="White" x:Name="add_water" Clicked="add_water_Clicked"/>
+
+                    <Frame BackgroundColor="White" AbsoluteLayout.LayoutBounds="215,50,185,150"></Frame>
+                    <Image Source="heartbeat.png" AbsoluteLayout.LayoutBounds="225,0,100,100"/>
+                    <Label x:Name="date_heartbeat" AbsoluteLayout.LayoutBounds="330,70,100,100" TextColor="Black"/>
+                    <Label Text="Theo dõi chỉ số đường huyết và giấc ngủ" AbsoluteLayout.LayoutBounds="225,100,180,120" TextColor="#a35d89" FontAttributes="Bold"/>
+                    <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="225, 140, 165, 2" />
+                    <Label Text="Thêm chỉ số" AbsoluteLayout.LayoutBounds="225,160,100,100"/>
+                    <ImageButton Source="add.png" AbsoluteLayout.LayoutBounds="340, 145, 50, 50" BackgroundColor="White" x:Name="add_vitals" Clicked="add_vitals_Clicked"/>
+
+                    <Frame BackgroundColor="White" AbsoluteLayout.LayoutBounds="10,270,185,150"></Frame>
+                    <Image Source="weight_scale_1.png" AbsoluteLayout.LayoutBounds="20,220,100,100"/>
+                    <Label x:Name="date_weight" AbsoluteLayout.LayoutBounds="125,290,100,100" TextColor="Black"/>
+                    <Label Text="Theo dõi trọng lượng" AbsoluteLayout.LayoutBounds="20,330,200,120" TextColor="#ff0011" FontAttributes="Bold"/>
+                    <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="20, 360, 165, 2" />
+                    <Label Text="Thêm trọng lượng" AbsoluteLayout.LayoutBounds="20,380,130,100"/>
+                    <ImageButton Source="add.png" AbsoluteLayout.LayoutBounds="135, 365, 50, 50" BackgroundColor="White" x:Name="add_weight" Clicked="add_weight_Clicked"/>
+
+                    <Frame BackgroundColor="White" AbsoluteLayout.LayoutBounds="215,270,185,150"></Frame>
+                    <Image Source="diet.png" AbsoluteLayout.LayoutBounds="225,220,100,100"/>
+                    <Label x:Name="date_diet" AbsoluteLayout.LayoutBounds="330,290,100,100" TextColor="Black"/>
+                    <Label Text="Theo dõi lượng calo" AbsoluteLayout.LayoutBounds="225,330,180,120" TextColor="#61c296" FontAttributes="Bold"/>
+                    <BoxView Color="Silver" AbsoluteLayout.LayoutBounds="225, 360, 165, 2" />
+                    <Label Text="Thêm số calo" AbsoluteLayout.LayoutBounds="225,380,130,100"/>
+                    <ImageButton Source="add.png" AbsoluteLayout.LayoutBounds="340, 365, 50, 50" BackgroundColor="White" x:Name="add_calories" Clicked="add_calories_Clicked"/>
+                </AbsoluteLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage>
     <ContentPage Title="Tính toán" IconImageSource="calculator.png">
         <StackLayout>
             <Image Source="calculator_banner.png"/>

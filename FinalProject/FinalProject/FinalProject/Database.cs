@@ -16,6 +16,9 @@ namespace FinalProject
                 string path = System.IO.Path.Combine(folder, "healthcare.db");
                 var connection = new SQLiteConnection(path);
                 connection.CreateTable<User>();
+                connection.CreateTable<WaterHisory>();
+                connection.CreateTable<SleepHistory>();
+                connection.CreateTable<BloodTestHistory>();
                 return true;
             }
             catch
@@ -87,6 +90,169 @@ namespace FinalProject
             catch
             {
                 return;
+            }
+        }
+
+        public User getUser(string username)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list = connection.Query<User>("select * from User where UserName=?", username);
+                return list[0];
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        //Water dashboar handling
+        public void changeTargetWater(int userID, float target)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Query<User>("update User set UserTargetWater=" + target + " where UserID=" + userID);
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+        public List<WaterHisory> getWaterHistoryByDay(int userID, string date)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                string Query = "select * from WaterHisory where UserID=" + userID + " and Date='" + date +"'";
+                Console.WriteLine(Query);
+                var list = connection.Query<WaterHisory>(Query);
+                return list;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }  
+        public bool addWater(WaterHisory result)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Insert(result);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public void deleteAllWater()
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.DeleteAll<WaterHisory>();
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        //Sleep history handling
+        public SleepHistory getLastSleep(int userID)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list = connection.Query<SleepHistory>("select * from SleepHistory where UserID=? order by shID desc limit 1", userID);
+                return list[0];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public List<SleepHistory> getLastTenSleep(int userID)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list = connection.Query<SleepHistory>("select * from SleepHistory where UserID=? order by shID desc limit 10", userID);
+                return list;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public bool addSleep(SleepHistory result)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Insert(result);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Blood test history handling
+        public BloodTestHistory getLastBloodTest(int userID)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list = connection.Query<BloodTestHistory>("select * from BloodTestHistory where UserID=? order by bthID desc limit 1", userID);
+                return list[0];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public List<BloodTestHistory> getLastTenBloodTest(int userID)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list = connection.Query<BloodTestHistory>("select * from BloodTestHistory where UserID=? order by bthID desc limit 10", userID);
+                return list;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public bool addBloodTest(BloodTestHistory result)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Insert(result);
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

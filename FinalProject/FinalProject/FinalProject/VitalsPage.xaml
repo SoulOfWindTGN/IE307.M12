@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.VitalsPage"
+             Title="Chỉ số đường huyết và giấc ngủ">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#e0ded7">
+            <AbsoluteLayout>
+                <Frame BackgroundColor="#b2c8db" AbsoluteLayout.LayoutBounds="10,60,390,200"></Frame>
+                <Image Source="sleep_time_banner.jpg" AbsoluteLayout.LayoutBounds="25,0,360,180"/>
+                <Image Source="sleeping.png" AbsoluteLayout.LayoutBounds="25,150,50,50"/>
+                <Label Text="Theo dõi giấc ngủ" AbsoluteLayout.LayoutBounds="80,160,200,200" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="#ad51cf"/>
+                <Label Text="Dữ liệu gần nhất: " AbsoluteLayout.LayoutBounds="35,220,200,200" FontSize="Medium" TextColor="Black"/>
+                <Label x:Name="sleep_last_record" Text="test" AbsoluteLayout.LayoutBounds="190,220,200,200" FontSize="Medium" 
+                       TextColor="Black" FontAttributes="Bold"/>
+                <ImageButton Source="add.png" AbsoluteLayout.LayoutBounds="320,170,70,70" BackgroundColor="#b2c8db" 
+                             x:Name="sleep_time" Clicked="sleep_time_Clicked"/>
+
+
+                <Frame BackgroundColor="#a2d4e8" AbsoluteLayout.LayoutBounds="10,360,390,200"></Frame>
+                <Image Source="glucose_lever_banner.jpg" AbsoluteLayout.LayoutBounds="25,300,360,180"/>
+                <Image Source="blood_test.png" AbsoluteLayout.LayoutBounds="25,452,50,50"/>
+                <Label Text="Theo dõi đường huyết" AbsoluteLayout.LayoutBounds="80,460,300,200" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="#1672b8"/>
+                <Label Text="Dữ liệu gần nhất: " AbsoluteLayout.LayoutBounds="35,520,200,200" FontSize="Medium" TextColor="Black"/>
+                <Label x:Name="blood_last_record" Text="test" AbsoluteLayout.LayoutBounds="190,520,200,200" 
+                       FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                <ImageButton Source="add.png" AbsoluteLayout.LayoutBounds="320,470,70,70" BackgroundColor="#a2d4e8" 
+                             x:Name="blood_test" Clicked="blood_test_Clicked"/>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

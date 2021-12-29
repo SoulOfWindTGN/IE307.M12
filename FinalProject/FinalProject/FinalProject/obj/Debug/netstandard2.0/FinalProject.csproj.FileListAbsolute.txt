@@ -43,7 +43,6 @@ E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard2.0\FinalProject.dll
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard2.0\ref\FinalProject.dll
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\bin\Debug\netstandard2.0\FinalProject.pdb
-E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.csproj.AssemblyReference.cache
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\App.xaml.g.cs
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\BasalMetabolicRatePage.xaml.g.cs
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\BMI.xaml.g.cs
@@ -63,3 +62,10 @@ E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\IdealWeightPage.xaml.g.cs
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FFMIPage.xaml.g.cs
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\NutritionalContentPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\WaterDashboardPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\WaterHistory.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\VitalsPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\BloodTestPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\SleepTimePage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\AddSleepTimePopup.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\AddBloodTestPopup.xaml.g.cs

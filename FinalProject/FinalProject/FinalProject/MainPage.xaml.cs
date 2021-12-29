@@ -20,7 +20,8 @@ namespace FinalProject
             Database db = new Database();
             if (db.checkLoginUser(username.Text, password.Text))
             {
-                Navigation.PushAsync(new HealthCarePage());
+                User user = db.getUser(username.Text);
+                Navigation.PushAsync(new HealthCarePage(user));
             }
             else
             {

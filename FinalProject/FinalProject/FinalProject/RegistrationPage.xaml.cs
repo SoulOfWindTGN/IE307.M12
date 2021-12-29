@@ -44,6 +44,8 @@ namespace FinalProject
                         user.UserGender = "Nữ";
                     user.UserHeight = Int32.Parse(height.Text);
                     user.UserWeight = Int32.Parse(weight.Text);
+                    user.UserTargetWater = 0;
+                    user.UserTargetWeight = 0;
 
                     if (db.addUser(user))
                     {

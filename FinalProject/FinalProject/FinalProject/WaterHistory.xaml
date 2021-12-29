@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.WaterHistory"
+             Title="Chi tiết lượng nước">
+    <ContentPage.Content>
+        <StackLayout>
+            <AbsoluteLayout>
+                <BoxView Color="Purple" AbsoluteLayout.LayoutBounds="0, 0, 500, 50" />
+                <Label x:Name="date" AbsoluteLayout.LayoutBounds="145,15,300, 50" FontSize="25" FontAttributes="Bold" TextColor="White"/>
+            </AbsoluteLayout>
+            <ListView x:Name="history_list" BackgroundColor="#e8e4d8">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding Image}" Text="{Binding AmountWater}" Detail="{Binding Hour}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

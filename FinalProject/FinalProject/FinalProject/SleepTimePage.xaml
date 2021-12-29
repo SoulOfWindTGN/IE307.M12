@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.SleepTimePage"
+             Title="Theo dõi giấc ngủ">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add.png" Order="Primary" Priority="0" x:Name="add" Clicked="add_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <AbsoluteLayout>
+                <BoxView Color="#fcba03" AbsoluteLayout.LayoutBounds="0, 0, 500, 50" />
+                <Label x:Name="date" AbsoluteLayout.LayoutBounds="145,15,300, 50" FontSize="25" FontAttributes="Bold" TextColor="White"/>
+                <Frame BackgroundColor="#a3b4e3" AbsoluteLayout.LayoutBounds="10, 10, 390, 150" CornerRadius="10"/>
+                <Image Source="history.png" AbsoluteLayout.LayoutBounds="20, 30, 30, 30" />
+                <Label Text="Lần nhập cuối cùng" AbsoluteLayout.LayoutBounds="65, 30, 200, 30" TextColor="Black" FontSize="Medium"/>
+                <Image Source="history.png" AbsoluteLayout.LayoutBounds="230, 30, 30, 30" />
+                <Label Text="Trung bình cộng" AbsoluteLayout.LayoutBounds="265, 30, 200, 30" TextColor="Black" FontSize="Medium"/>
+                
+                <Image Source="history.png" AbsoluteLayout.LayoutBounds="20, 95, 30, 30" />
+                <Label Text="Tối đa" AbsoluteLayout.LayoutBounds="65, 95, 200, 30" TextColor="Black" FontSize="Medium"/>
+                <Image Source="history.png" AbsoluteLayout.LayoutBounds="230, 95, 30, 30" />
+                <Label Text="Tối thiểu" AbsoluteLayout.LayoutBounds="265, 95, 200, 30" TextColor="Black" FontSize="Medium"/>
+
+                <Label x:Name="last_record" Text="Test" AbsoluteLayout.LayoutBounds="20, 65, 200, 30" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                <Label x:Name="average" Text="Test" AbsoluteLayout.LayoutBounds="235, 65, 200, 30" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                <Label x:Name="max" Text="Test" AbsoluteLayout.LayoutBounds="20, 125, 200, 30" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                <Label x:Name="min" Text="Test" AbsoluteLayout.LayoutBounds="235, 125, 200, 30" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+
+            </AbsoluteLayout>
+            <ListView x:Name="sleep_history">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#a3f0d5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="clock" HeightRequest="40" Margin="5" Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="{Binding Hours, StringFormat='{0} Giờ'}" FontSize="Large" TextColor="Black" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End"/>
+                                    <Label Text="{Binding Minutes, StringFormat='{0} Phút'}" FontSize="Large" TextColor="Black" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+                                    <Label Text="{Binding Date,StringFormat='Ngày: {0}'}" FontSize="Large" TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="3"
+                                           VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
