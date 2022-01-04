@@ -65,7 +65,7 @@ namespace FinalProject
                 List<int> min_result = ConvertMinutesToHours(min_value);
                 List<int> max_result = ConvertMinutesToHours(max_value);
 
-                last_record.Text = list[list.Count() - 1].Hours.ToString() + " giờ " + list[list.Count() - 1].Minutes.ToString() + " phút";
+                last_record.Text = list[0].Hours.ToString() + " giờ " + list[0].Minutes.ToString() + " phút";
                 min.Text = min_result[0].ToString() + " giờ " + min_result[1].ToString() + " phút";
                 max.Text = max_result[0].ToString() + " giờ " + max_result[1].ToString() + " phút";
                 average.Text = average_result[0].ToString() + " giờ " + average_result[1].ToString() + " phút";

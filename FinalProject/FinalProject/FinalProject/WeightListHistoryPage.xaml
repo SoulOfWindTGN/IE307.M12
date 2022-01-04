@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.WeightListHistoryPage"
+             Title="Lịch sử cân nặng">
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,0">
+            <ListView x:Name="lst" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#f6f0fa">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="weight_scale_3.png" HeightRequest="40"/>
+                                    <Label Text="{Binding Weight, StringFormat='{0} Kg'}" FontSize="Large" 
+                                           VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding Date}" FontSize="Large" VerticalTextAlignment="Center" Padding="170,0,0,0"
+                                           FontAttributes="Bold" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="bmi_1.png" HeightRequest="40"/>
+                                    <Label Text="BMI" VerticalTextAlignment="Center"/>
+                                    <Image Source="belly.png" HeightRequest="40" Margin="160,0,0,0"/>
+                                    <Label Text="Chất béo cơ thể (%)" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding BMI}" FontSize="Large" 
+                                           VerticalTextAlignment="Center" Padding="20,0,0,0"/>
+                                    <Label Text="{Binding FatRatio, StringFormat='{0} %'}" FontSize="Large" VerticalTextAlignment="Center" Padding="220,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

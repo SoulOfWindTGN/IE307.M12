@@ -19,6 +19,8 @@ namespace FinalProject
                 connection.CreateTable<WaterHisory>();
                 connection.CreateTable<SleepHistory>();
                 connection.CreateTable<BloodTestHistory>();
+                connection.CreateTable<CaloriesHistory>();
+                connection.CreateTable<WeightHistory>();
                 return true;
             }
             catch
@@ -105,6 +107,19 @@ namespace FinalProject
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+        public void changeWeight(int userID, int weight)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Query<User>("update User set UserWeight=" + weight + " where UserID=" + userID);
+            }
+            catch (Exception ex)
+            {
+                return;
             }
         }
 
@@ -253,6 +268,94 @@ namespace FinalProject
             catch
             {
                 return false;
+            }
+        }
+
+        //Calories history handling
+        public List<CaloriesHistory> getCaloriesHistoryByDay(int userID, string date)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                string Query = "select * from CaloriesHistory where UserID=" + userID + " and Date='" + date + "'";
+                var list = connection.Query<CaloriesHistory>(Query);
+                return list;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public void changeTargetCalories(int userID, int target)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Query<User>("update User set UserTargetCalories=" + target + " where UserID=" + userID);
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+        public bool addCaloriesHistory(CaloriesHistory result)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Insert(result);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //weight history handling
+        public void changeTargetWeight(int userID, int target)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Query<User>("update User set UserTargetWeight=" + target + " where UserID=" + userID);
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+        public bool addWeightHistory(WeightHistory result)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Insert(result);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<WeightHistory> getLastTenWeight(int userID)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list = connection.Query<WeightHistory>("select * from WeightHistory where UserID=? order by weighthistoryID desc limit 10", userID);
+                return list;
+            }
+            catch
+            {
+                return null;
             }
         }
     }

@@ -69,3 +69,7 @@ E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\SleepTimePage.xaml.g.cs
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\AddSleepTimePopup.xaml.g.cs
 E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\AddBloodTestPopup.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\FinalProject.csproj.AssemblyReference.cache
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\CaloriesHistoryPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\WeightHistoryPage.xaml.g.cs
+E:\Github\IE307.M12\FinalProject\FinalProject\FinalProject\obj\Debug\netstandard2.0\WeightListHistoryPage.xaml.g.cs

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.WeightHistoryPage"
+             xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+             Title="Theo dõi trọng lượng">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="clock.png" Order="Primary" Priority="0" x:Name="history" Clicked="history_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+            <AbsoluteLayout>
+                <BoxView Color="#ff3333" AbsoluteLayout.LayoutBounds="0, 0, 500, 50" />
+                <Frame BackgroundColor="#ebb507" AbsoluteLayout.LayoutBounds="10, 10, 390, 210" CornerRadius="10"/>
+                <Image Source="weight_scale_2.png" AbsoluteLayout.LayoutBounds="20, 30, 30, 30" />
+                <Label Text="Lần nhập cuối cùng" AbsoluteLayout.LayoutBounds="65, 30, 200, 30" TextColor="White" FontSize="Medium"/>
+                <Image Source="weight_scale_2.png" AbsoluteLayout.LayoutBounds="230, 30, 30, 30" />
+                <Label Text="Trung bình cộng" AbsoluteLayout.LayoutBounds="265, 30, 200, 30" TextColor="White" FontSize="Medium"/>
+
+                <Image Source="weight_scale_2.png" AbsoluteLayout.LayoutBounds="20, 95, 30, 30" />
+                <Label Text="Tối đa" AbsoluteLayout.LayoutBounds="65, 95, 200, 30" TextColor="White" FontSize="Medium"/>
+                <Image Source="weight_scale_2.png" AbsoluteLayout.LayoutBounds="230, 95, 30, 30" />
+                <Label Text="Tối thiểu" AbsoluteLayout.LayoutBounds="265, 95, 200, 30" TextColor="White" FontSize="Medium"/>
+
+                <Label x:Name="last_record" Text="Chưa có dữ liệu" AbsoluteLayout.LayoutBounds="20, 65, 200, 30" TextColor="White"
+                       FontSize="Medium" FontAttributes="Bold"/>
+                <Label x:Name="average" Text="Chưa có dữ liệu" AbsoluteLayout.LayoutBounds="235, 65, 200, 30" TextColor="White" 
+                       FontSize="Medium" FontAttributes="Bold"/>
+                <Label x:Name="max" Text="Chưa có dữ liệu" AbsoluteLayout.LayoutBounds="20, 125, 200, 30" TextColor="White" 
+                       FontSize="Medium" FontAttributes="Bold"/>
+                <Label x:Name="min" Text="Chưa có dữ liệu" AbsoluteLayout.LayoutBounds="235, 125, 200, 30" TextColor="White" 
+                       FontSize="Medium" FontAttributes="Bold"/>
+
+                <BoxView BackgroundColor="White" AbsoluteLayout.LayoutBounds="20, 170, 370, 1"/>
+                <Image Source="target.png" AbsoluteLayout.LayoutBounds="20,180,30,30"/>
+                <Label FontSize="Medium" TextColor="White" Text="Trọng lượng mục tiêu: Chưa thiết lập" 
+                       AbsoluteLayout.LayoutBounds="60, 180, 400, 50" x:Name="target"/>
+                <ImageButton Source="edit.png" AbsoluteLayout.LayoutBounds="350, 175, 40, 40" 
+                             BackgroundColor="Transparent" x:Name="edit" Clicked="edit_Clicked"/>
+
+                <Frame BackgroundColor="#41436A" AbsoluteLayout.LayoutBounds="10, 280, 390, 300" CornerRadius="10"/>
+                <range:SfRangeSlider ShowRange="False" TickPlacement="TopLeft"
+                                     TickColor="#00d0ff" TrackThickness="10" Minimum="20" Maximum="200" StepFrequency="1"
+                                     Orientation="Horizontal" AbsoluteLayout.LayoutBounds="10, 280, 390, 100" TickFrequency="20"
+                                     TrackColor="#984063" ThumbSize="1" KnobColor="#FE9677" LabelFormat=" +{0} kg"
+                                     TrackSelectionColor="#F64668" ShowValueLabel="true" Value="60"
+                                     x:Name="weight_scale" ValueChanging="weight_scale_ValueChanging"/>
+                <Label Text="Trọng lượng hiện tại của bạn (Kg):" AbsoluteLayout.LayoutBounds="20, 380, 390, 290" TextColor="#ffffff"/>
+                <Image Source="weight_scale_2.png" AbsoluteLayout.LayoutBounds="20, 400, 40, 40"/>
+                <BoxView BackgroundColor="White" AbsoluteLayout.LayoutBounds="80, 440, 260, 1"/>
+                <Label Text="BMI" AbsoluteLayout.LayoutBounds="80, 460, 390, 290" TextColor="#ffffff"/>
+                <Label Text="Trọng lượng lý tưởng (Kg)" AbsoluteLayout.LayoutBounds="210, 460, 390, 290" TextColor="#ffffff"/>
+                <BoxView BackgroundColor="White" AbsoluteLayout.LayoutBounds="20, 520, 370, 1"/>
+                <Label Text="Chất béo cơ thể (%)" AbsoluteLayout.LayoutBounds="40, 525, 390, 290" TextColor="#ffffff"/>
+                <Label Text="Ngày ghi nhận" AbsoluteLayout.LayoutBounds="230, 525, 390, 290" TextColor="#ffffff"/>
+
+                <Label Text="60" AbsoluteLayout.LayoutBounds="80, 400, 390, 290" x:Name="weight"
+                       FontAttributes="Bold" FontSize="Large" TextColor="#00d0ff"/>
+                <Label Text="13.41" AbsoluteLayout.LayoutBounds="70, 480, 390, 290" 
+                       FontAttributes="Bold" FontSize="Large" TextColor="#00d0ff" x:Name="bmi"/>
+                <Label Text="65" AbsoluteLayout.LayoutBounds="245, 480, 390, 290" 
+                       FontAttributes="Bold" FontSize="Large" TextColor="#00d0ff" x:Name="ideal_weight"/>
+                <Label Text="11.75" AbsoluteLayout.LayoutBounds="75, 545, 390, 290" 
+                       FontAttributes="Bold" FontSize="Large" TextColor="#00d0ff" x:Name="fat_ratio"/>
+                <Label Text="04-01-2021" AbsoluteLayout.LayoutBounds="220, 545, 390, 290" 
+                       FontAttributes="Bold" FontSize="Large" TextColor="#00d0ff" x:Name="date"/>
+
+                <ImageButton Source="add.png" AbsoluteLayout.LayoutBounds="350, 390, 50, 50" BackgroundColor="Transparent"
+                             x:Name="add" Clicked="add_Clicked"/>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

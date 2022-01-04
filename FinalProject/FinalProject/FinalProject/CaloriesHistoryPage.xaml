@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.CaloriesHistoryPage"
+             Title="Chi tiết calories">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add.png" Order="Primary" Priority="0" x:Name="add" Clicked="add_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <AbsoluteLayout>
+                <BoxView Color="#61c296" AbsoluteLayout.LayoutBounds="0, 0, 500, 50" />
+                <Frame BackgroundColor="#ff7d97" AbsoluteLayout.LayoutBounds="10, 10, 390, 150" CornerRadius="10"/>
+                <Label Text="Lượng calo" AbsoluteLayout.LayoutBounds="30,20,300,80" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="Ngày 03-01-2022" x:Name="date" AbsoluteLayout.LayoutBounds="230,20,300,80" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                <ProgressBar x:Name="progress" AbsoluteLayout.LayoutBounds="20,30,370,50" ProgressColor="#169152" ScaleY="2" Progress=".5"/>
+                <Label Text="1000 / 2000 K.cal" x:Name="current_calories" AbsoluteLayout.LayoutBounds="120,70,200,50" HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="White"/>
+                <BoxView Color="White" AbsoluteLayout.LayoutBounds="20,110,370,1"/>
+                <Label x:Name="target" Text="Mục tiêu 2000 K.cal mỗi ngày" FontSize="Medium" TextColor="White" AbsoluteLayout.LayoutBounds="90,130,300,50"/>
+                <Image Source="target.png" AbsoluteLayout.LayoutBounds="20,115,40,40"/>
+                <ImageButton Source="edit.png" BackgroundColor="Transparent" x:Name="edit_target" Clicked="edit_target_Clicked" 
+                             AbsoluteLayout.LayoutBounds="350,115,40,40"/>
+
+            </AbsoluteLayout>
+            <ScrollView>
+                <ListView x:Name="list_calo">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell Text="{Binding meal}" ImageSource="{Binding image_meal}"
+                                       Detail="{Binding calories, StringFormat='{0} K.cal'}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

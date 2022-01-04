@@ -103,12 +103,16 @@ namespace FinalProject
 
         private void add_calories_Clicked(object sender, EventArgs e)
         {
-
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(97, 194, 150);
+            Navigation.PushAsync(new CaloriesHistoryPage(this.user));
         }
 
         private void add_weight_Clicked(object sender, EventArgs e)
         {
-
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(255, 51, 51);
+            Navigation.PushAsync(new WeightHistoryPage(this.user));
         }
     }
 }

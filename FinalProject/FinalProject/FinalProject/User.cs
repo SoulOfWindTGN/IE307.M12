@@ -16,7 +16,8 @@ namespace FinalProject
         public string UserGender { get; set; } // Giới tính
         public int UserWeight { get; set; } // Cân nặng
         public int UserHeight { get; set; } // Chiều cao
-        public float UserTargetWeight { get; set; } // Cân nặng mục tiêu
+        public int UserTargetWeight { get; set; } // Cân nặng mục tiêu
         public float UserTargetWater { get; set; } // Lượng nước mục tiêu
+        public int UserTargetCalories { get; set; } // Lượng calo mục tiêu
     }
 }

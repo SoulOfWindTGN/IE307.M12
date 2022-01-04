@@ -55,7 +55,7 @@ namespace FinalProject
                 }
                 average_value /= list.Count();
 
-                last_record.Text = Math.Round(list[list.Count() - 1].Index,3).ToString() + " mg/dl";
+                last_record.Text = Math.Round(list[0].Index,3).ToString() + " mg/dl";
                 average.Text = Math.Round(average_value, 3).ToString() + " mg/dl";
                 min.Text = Math.Round(min_value, 3).ToString() + " mg/dl";
                 max.Text = Math.Round(max_value, 3).ToString() + " mg/dl";

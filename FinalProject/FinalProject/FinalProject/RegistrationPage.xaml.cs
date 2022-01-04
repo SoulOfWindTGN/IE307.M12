@@ -46,6 +46,7 @@ namespace FinalProject
                     user.UserWeight = Int32.Parse(weight.Text);
                     user.UserTargetWater = 0;
                     user.UserTargetWeight = 0;
+                    user.UserTargetCalories = 2000;
 
                     if (db.addUser(user))
                     {
