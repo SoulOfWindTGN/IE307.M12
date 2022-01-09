@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.EditProfilePage"
+             BackgroundImageSource="login_background.jpg"
+             Title="Thay đổi thông tin">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="40" Spacing="30">
+            <BoxView HeightRequest="10"/>
+            <Frame BackgroundColor="#BF043055" HasShadow="False">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Label Text="Tên đăng nhập" TextColor="White"/>
+                    <Label x:Name="user_account" HeightRequest="40" TextColor="White"/>
+                    <Entry x:Name="user_password" Placeholder="Mật khẩu"   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="White"/>
+                    <Entry x:Name="check_password" Placeholder="Nhập lại mật khẩu"   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="White"/>
+                    <Entry x:Name="user_name" Placeholder="Tên người dùng"   
+                           PlaceholderColor="White" HeightRequest="40"
+                           Keyboard="Text"
+                           TextColor="White"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Ngày sinh" TextColor="White" FontSize="Medium" Padding="5"/>
+                        <DatePicker x:Name="user_birthday" MinimumDate="01/01/1930" MaximumDate="12/31/2020" Format="dd/MM/yyyy"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="gender" Padding="5 ,0 ,10,-10">
+                        <Label Text="Giới tính" TextColor="White" FontSize="Medium" Padding="0"/>
+                        <RadioButton Content="Nam" Value="Male" TextColor="Aquamarine" x:Name="male"/>
+                        <RadioButton Content="Nữ" Value="Female" TextColor="LightPink" x:Name="female"/>
+                    </StackLayout>
+                    <Entry x:Name="user_weight" Placeholder="Cân nặng (kg)"   
+                           PlaceholderColor="White" HeightRequest="40"
+                           Keyboard="Numeric"
+                           TextColor="White"/>
+                    <Entry x:Name="user_height" Placeholder="Chiều cao (cm)"   
+                           PlaceholderColor="White" HeightRequest="40"
+                           Keyboard="Numeric"
+                           TextColor="White"/>
+                </StackLayout>
+            </Frame>
+            <Button Text="Lưu" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" x:Name="saveprofile" Clicked="saveprofile_Clicked"/>
+            <Button Text="Hủy" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" x:Name="cancel" Clicked="cancel_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

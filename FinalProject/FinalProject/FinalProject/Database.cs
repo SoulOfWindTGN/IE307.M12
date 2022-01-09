@@ -21,6 +21,8 @@ namespace FinalProject
                 connection.CreateTable<BloodTestHistory>();
                 connection.CreateTable<CaloriesHistory>();
                 connection.CreateTable<WeightHistory>();
+                connection.CreateTable<Medicine>();
+                connection.CreateTable<History>();
                 return true;
             }
             catch
@@ -354,6 +356,81 @@ namespace FinalProject
                 return list;
             }
             catch
+            {
+                return null;
+            }
+        }
+
+        public bool UpdateUserInfos(User user)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Update(user);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<Medicine> getMedicine(int userID)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list_m = connection.Query<Medicine>("select * from Medicine where UserID=?", userID);
+                return list_m;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public bool addMedicine(Medicine medicine)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Insert(medicine);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool addHistory(History history)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                connection.Insert(history);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<History> getHistory(int userID)
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(folder, "healthcare.db");
+                var connection = new SQLiteConnection(path);
+                var list = connection.Query<History>("select * from History where UserID=?", userID);
+                return list;
+            }
+            catch (Exception ex)
             {
                 return null;
             }

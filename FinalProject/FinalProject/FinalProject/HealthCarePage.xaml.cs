@@ -19,11 +19,20 @@ namespace FinalProject
         }
         public HealthCarePage(User user)
         {
-            InitializeComponent();
             this.user = user;
+            InitializeComponent();
+            user_name.Text = user.UserFullName;
+            user_birthday.Text = user.UserDateOfBirth;
+            user_gender.Text = user.UserGender;
+            user_weight.Text = user.UserWeight.ToString();
+            user_height.Text = user.UserHeight.ToString();
             String myDate = DateTime.Now.ToString("dd-MM-yyyy");
             date_water.Text = myDate;
             date_heartbeat.Text = myDate;
+
+            Database db = new Database();
+            List<History> list = db.getHistory(this.user.UserID);
+            list_history.ItemsSource = list;
         }
 
         private void BMI_Clicked(object sender, EventArgs e)
@@ -56,7 +65,9 @@ namespace FinalProject
 
         private void editProfile_Clicked(object sender, EventArgs e)
         {
-
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.FromRgb(35, 81, 207);
+            Navigation.PushAsync(new EditProfilePage(this.user));
         }
 
         private void body_fat_Clicked(object sender, EventArgs e)
@@ -113,6 +124,11 @@ namespace FinalProject
             var navigationPage = Application.Current.MainPage as NavigationPage;
             navigationPage.BarBackgroundColor = Color.FromRgb(255, 51, 51);
             Navigation.PushAsync(new WeightHistoryPage(this.user));
+        }
+
+        private void addMedicine_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MedicineDashboardPage(this.user));
         }
     }
 }

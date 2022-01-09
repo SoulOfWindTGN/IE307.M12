@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.MedicineDashboardPage"
+             Title="Danh sách thuốc">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add.png" Order="Primary" Priority="0" Clicked="add_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="history_list" RowHeight="120">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="Tên thuốc: " TextColor="Black" FontSize="Medium" FontAttributes="Bold"
+                                       Grid.Column="0" Grid.Row="0"/>
+                                <Label Text="{Binding MedicineName}" TextColor="Black" FontSize="Medium" FontAttributes="None"
+                                       Grid.Column="1" Grid.Row="0"/>
+                                <Label Text="Ngày bắt đầu: " TextColor="Black" FontSize="Medium" FontAttributes="Bold"
+                                       Grid.Column="0" Grid.Row="1"/>
+                                <Label Text="{Binding Date}" TextColor="Black" FontSize="Medium" FontAttributes="None"
+                                       Grid.Column="1" Grid.Row="1"/>
+                                <Label Text="Liều: " TextColor="Black" FontSize="Medium" FontAttributes="Bold"
+                                       Grid.Column="0" Grid.Row="2"/>
+                                <Label Text="{Binding Number}" TextColor="Black" FontSize="Medium" FontAttributes="None"
+                                       Grid.Column="1" Grid.Row="2"/>
+                                <Label Text="Thời gian uống: " TextColor="Black" FontSize="Medium" FontAttributes="Bold"
+                                       Grid.Column="0" Grid.Row="3"/>
+                                <Label Text="{Binding Time}" TextColor="Black" FontSize="Medium" FontAttributes="None"
+                                       Grid.Column="1" Grid.Row="3"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -12,6 +12,7 @@ namespace FinalProject
             Database db = new Database();
             db.createDatabase();
             MainPage = new NavigationPage(new MainPage());
+
         }
 
         protected override void OnStart()

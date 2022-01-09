@@ -12,6 +12,6 @@ namespace FinalProject
         public int UserID { get; set; }
         public string ActivityName { get; set; } // Tên hoạt động vd: Uống nước
         public string Detail { get; set; } //Chi tiết vd: 5ml
-        public DateTime Time { get; set; } //Thời gian hoạt động
+        public string Time { get; set; } //Thời gian hoạt động
     }
 }

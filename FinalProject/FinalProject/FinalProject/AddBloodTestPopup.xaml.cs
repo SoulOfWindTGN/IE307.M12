@@ -40,6 +40,14 @@ namespace FinalProject
                 result.Index = index_num;
                 Database db = new Database();
                 db.addBloodTest(result);
+
+                History h = new History();
+                h.UserID = this.user.UserID;
+                h.ActivityName = "Đường huyết";
+                h.Detail = index_num.ToString();
+                DateTime date = DateTime.Now;
+                h.Time = date.ToString();
+                db.addHistory(h);
                 Dismiss(null);
             }
         }

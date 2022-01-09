@@ -7,8 +7,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="White"
             android:TabbedPage.BarSelectedItemColor="Orange"
-            BarBackgroundColor="#4a096e"
-            BackgroundColor="#e0ded7">
+            BarBackgroundColor="#4a096e">
     <!--Pages can be added as references or inline-->
     <ContentPage Title="Thông tin người dùng" IconImageSource="user.png">
         <Grid>
@@ -19,33 +18,33 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="160"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Image Source="user_banner.jpg" Aspect="AspectFill" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
-            
-            <Label Text="Tên: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="1" Grid.Column="0"/>
-            <Label Text="{Binding UserFullName}" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
 
-            <Label Text="Ngày sinh: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="2" Grid.Column="0"/>
-            <Label Text="{Binding UserDateOfBirth}" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="2" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+            <Label Text="Tên: " TextColor="CornflowerBlue" FontAttributes="Bold" FontSize="Large" Grid.Row="1" Grid.Column="0"/>
+            <Label x:Name="user_name" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"/>
 
-            <Label Text="Giới tính: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="3" Grid.Column="0"/>
-            <Label Text="{Binding UserGender}" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="3" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+            <Label Text="Ngày sinh: " TextColor="CornflowerBlue" FontAttributes="Bold" FontSize="Large" Grid.Row="2" Grid.Column="0"/>
+            <Label x:Name="user_birthday" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"/>
+
+            <Label Text="Giới tính: " TextColor="CornflowerBlue" FontAttributes="Bold" FontSize="Large" Grid.Row="3" Grid.Column="0"/>
+            <Label x:Name="user_gender" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"/>
+
+            <Label Text="Cân nặng (kg): " TextColor="CornflowerBlue" FontAttributes="Bold" FontSize="Large" Grid.Row="4" Grid.Column="0"/>
+            <Label x:Name="user_weight" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="4" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"/>
+
+            <Label Text="Chiều cao (cm): " TextColor="CornflowerBlue" FontAttributes="Bold" FontSize="Large" Grid.Row="5" Grid.Column="0"/>
+            <Label x:Name="user_height" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"/>
             
-            <Label Text="Cân nặng: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="4" Grid.Column="0"/>
-            <Label Text="{Binding UserWeight}" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="4" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
-            
-            <Label Text="Chiều cao: " TextColor="CornflowerBlue" FontSize="Large" Grid.Row="5" Grid.Column="0"/>
-            <Label Text="{Binding UserHeight}" TextColor="CornflowerBlue" FontSize="Large" Grid.Row="5" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
-            
-            <Button Text="Sửa thông tin người dùng" TextColor="White"  
-                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+            <Button Text="THAY ĐỔI" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large"  
                     BackgroundColor="#088da5" x:Name="editProfile" Clicked="editProfile_Clicked"
-                    Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    Grid.ColumnSpan="2" Grid.Row="6" Grid.Column="0" HorizontalOptions="Center"/>
         </Grid>
     </ContentPage>
     <ContentPage Title="Bảng điều khiển" IconImageSource="panel.png">
@@ -181,7 +180,7 @@
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="Thêm thuốc" FontSize="Medium"/>
-                                <ImageButton Source="plus.jpg" HorizontalOptions="EndAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <ImageButton Source="add.png" BackgroundColor="White" HorizontalOptions="EndAndExpand" WidthRequest="35" HeightRequest="35" x:Name="addMedicine" Clicked="addMedicine_Clicked"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>
@@ -189,6 +188,24 @@
             </ScrollView>
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Lịch sử hoạt động" IconImageSource="history.png"/>
+    <ContentPage Title="Lịch sử hoạt động" IconImageSource="history.png">
+        <ScrollView>
+            <ListView x:Name="list_history" RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#a3f0d5">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding ActivityName}" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Start"/>
+                                    <Label Text="{Binding Detail}" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <Label Text="{Binding Time}" FontSize="Small"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage>
 
 </TabbedPage>

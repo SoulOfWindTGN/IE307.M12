@@ -67,6 +67,13 @@ namespace FinalProject
                     break;
             }
             Database db = new Database();
+            History h = new History();
+            h.UserID = this.user.UserID;
+            h.ActivityName = "Uống nước";
+            h.Detail = result.AmountWater.ToString();
+            DateTime date = DateTime.Now;
+            h.Time = date.ToString();
+            db.addHistory(h);
             db.addWater(result);
         }
         public WaterDashboardPage(User user)

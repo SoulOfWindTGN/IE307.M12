@@ -44,6 +44,15 @@ namespace FinalProject
             result.Hours = (int)Math.Round(slider_hours.Value);
             result.Minutes = (int)Math.Round(slider_minutes.Value);
             db.addSleep(result);
+
+            History h = new History();
+            h.UserID = this.user.UserID;
+            h.ActivityName = "Đã ngủ";
+            h.Detail = result.Hours.ToString() + " giờ " + result.Minutes.ToString() + " phút";
+            DateTime date = DateTime.Now;
+            h.Time = date.ToString();
+            db.addHistory(h);
+
             Dismiss(null);
         }
     }

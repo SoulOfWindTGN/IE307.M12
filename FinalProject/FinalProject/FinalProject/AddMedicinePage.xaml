@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.AddMedicinePage"
+             Title="Thêm thuốc">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Tên thuốc:" Grid.Row="0" Grid.Column="0" FontSize="Large" VerticalOptions="StartAndExpand"/>
+                <Entry x:Name="m_name" Keyboard="Text" Grid.Row="0" Grid.Column="1" FontSize="Large" VerticalOptions="StartAndExpand"/>
+
+                <Label Text="Ngày bắt đầu: " FontSize="Large" Grid.Row="1" Grid.Column="0" VerticalOptions="StartAndExpand"/>
+                <DatePicker x:Name="m_begindate" MinimumDate="01/01/1930" MaximumDate="12/31/2020" Format="dd/MM/yyyy" Grid.Row="1" Grid.Column="1" FontSize="Large" VerticalOptions="StartAndExpand"/>
+
+                <Label Text="Số lượng: " FontSize="Large" Grid.Row="2" Grid.Column="0" VerticalOptions="StartAndExpand"/>
+                <Entry x:Name="m_number" Grid.Row="2" Grid.Column="1" Keyboard="Numeric" FontSize="Large" VerticalOptions="StartAndExpand"/>
+
+                <Label Text="Đơn vị: " FontSize="Large" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="m_unit" Grid.Row="3" Grid.Column="1" Keyboard="Text" FontSize="Large" VerticalOptions="StartAndExpand"/>
+
+                <Label Text="Thời gian: " FontSize="Large" Grid.Row="4" Grid.Column="0"/>
+                <TimePicker x:Name="m_time" Format="T" Grid.Row="4" Grid.Column="1" FontSize="Large" VerticalOptions="StartAndExpand"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Lưu" TextColor="White"  
+                            FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center"
+                            BackgroundColor="#088da5" x:Name="save" Clicked="save_Clicked" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                <Button Text="Hủy" TextColor="White"  
+                            FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center"
+                            BackgroundColor="#088da5" x:Name="cancel" Clicked="cancel_Clicked" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

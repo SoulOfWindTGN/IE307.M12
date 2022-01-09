@@ -158,8 +158,18 @@ namespace FinalProject
             wh.BMI = double.Parse(bmi.Text);
             wh.FatRatio = double.Parse(fat_ratio.Text);
             wh.Weight = int.Parse(weight.Text);
+
+            History h = new History();
+            h.UserID = this.user.UserID;
+            h.ActivityName = "Cân nặng";
+            h.Detail = weight.Text;
+            DateTime date = DateTime.Now;
+            h.Time = date.ToString();
+           
+
             Database db = new Database();
             db.addWeightHistory(wh);
+            db.addHistory(h);
             db.changeWeight(wh.Weight, this.user.UserID);
             this.user.UserWeight = wh.Weight;
             await DisplayAlert("Thông báo", "Thêm thành công", "Trở lại");
